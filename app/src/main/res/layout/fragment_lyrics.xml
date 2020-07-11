@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="tracksVM" type="fr.phrougerie.ultilyrics.data.viewModel.LyricsFragViewModel"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_height="match_parent"
+
+        >
+        <TextView
+            android:text="@{tracksVM.trackData.artistName}"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/artistName"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="@{tracksVM.trackData.trackName}"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <TextView
+                android:text="@{tracksVM.trackData.lyrics}"
+                android:id="@+id/lyricsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:textSize="18sp"
+            />
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="fr.phrougerie.ultilyrics.ui.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_lyricsFragment"
+            app:destination="@id/lyricsFragment" >
+
+            <argument
+                android:name="track"
+                app:argType="fr.phrougerie.ultilyrics.data.model.tracks.Track" />
+            <argument
+                android:name="isFavourite"
+                app:argType="boolean" />
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/lyricsFragment"
+        android:name="fr.phrougerie.ultilyrics.ui.fragments.LyricsFragment"
+        android:label="LyricsFragment" >
+        <argument
+            android:name="track"
+            app:argType="fr.phrougerie.ultilyrics.data.model.tracks.Track" />
+        <argument
+            android:name="isFavourite"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_lyricsFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_lyricsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="fr.phrougerie.ultilyrics.ui.fragments.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_lyricsFragment"
+            app:destination="@id/lyricsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="fr.phrougerie.ultilyrics.ui.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment2_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+    </fragment>
+</navigation>

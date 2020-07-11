@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UltiLyrics</string>
+    <string name="title_activity_lyrics">LyricsActivity</string>
+    <string name="search">Chercher</string>
+    <string name="home">Accueil</string>
+    <string name="favourite">Favoris</string>
+    <string name="track">Morceau</string>
+    <string name="artist">Artiste</string>
+    <string name="delete">Supprimer</string>
+    <string name="welcome">Bienvenu sur UltiLyrics. Cette application vous permettra de chercher les mocreaux de vos artistes préférés.</string>
+    <string name="search_incomplete">Recherche incomplète</string>
+    <string name="element_missing">Vous avez besoin d\'au moins un morceau ou un artiste !</string>
+    <string name="message_no_lycrics">Pas de paroles</string>
+    <string name="no_lyrics">Votre morceau ne possède pas de paroles !</string>
+</resources>

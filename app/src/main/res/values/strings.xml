@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UltiLyrics</string>
+    <string name="title_activity_lyrics">LyricsActivity</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="track">Track</string>
+    <string name="artist">Artist</string>
+    <string name="delete">Delete</string>
+    <string name="welcome">Welcome on UltyLyrics ! This application permits you to search for lyrics ...</string>
+    <string name="search_incomplete">Search incomplete</string>
+    <string name="element_missing">You need at least one artist or one track !</string>
+    <string name="message_no_lycrics">No lyrics</string>
+    <string name="no_lyrics">Your track has no lyrics !</string>
+
+
+</resources>
